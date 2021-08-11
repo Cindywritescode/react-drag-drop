@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const DownloadIcon = ({
-  size = 94
+const DownloadIconPlate = ({
+  size = 92
 }) => (
   <Icon
     xmlns="http://www.w3.org/2000/svg"
@@ -9,8 +9,23 @@ const DownloadIcon = ({
     height={size}
     viewBox="0 0 24 24"
   >
-    <path d="M1,17 L1,23 L23,23 L23,17 M12,2 L12,19 M5,12 L12,19 L19,12"/>
+    <path d="M1,0 L1,6 L23,6 L23,0"/>
   </Icon>
+);
+
+const DownloadIconArrow = ({
+  size = 94,
+  animate = true
+}) => (
+  <AnimatedIcon
+    animate={animate}
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+  >
+    <path d="M12,2 L12,19 M5,12 L12,19 L19,12"/>
+  </AnimatedIcon>
 );
 
 const Icon = styled.svg`
@@ -21,6 +36,25 @@ const Icon = styled.svg`
   }
 `
 
+const flipUpDown = keyframes`
+  from {
+    transform: translateY(0);
+  }
+  
+  50% {
+    transform: translateY(1em);
+  }
+  
+  to {
+    transform: translateY(0);
+  }
+`
+
+const AnimatedIcon = styled(Icon)`
+  animation: ${props => props.animate ? flipUpDown : 'none'} 1s ease-out infinite;
+`
+
 export {
-  DownloadIcon
+  DownloadIconArrow,
+  DownloadIconPlate
 }
