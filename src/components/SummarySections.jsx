@@ -24,6 +24,8 @@ const InfoText = styled.p`
   font-size: 1.5em;
   margin-top: 0;
   margin-bottom: 60px;
+  text-align: center;
+  padding: 4px;
 
   & p {
     margin: 0;
@@ -32,27 +34,29 @@ const InfoText = styled.p`
 
   & ul {
     margin: 0;
-    font-size: 0.7rem;
+    font-size: medium;
     line-height: 1.8;
-
   }
 
   & a {
     text-decoration: none;
     color: #103c4a;
+    font-size: x-large;
+    font-weight: normal;
 
     &:hover {
-      color: black;
+      color: #222222;
+      font-weight: bold;
     }
   }
 `;
 
 
 const InfoTextTitle = styled.strong`
-
+  font-size: x-large;
 `;
 
 export {
   InstructionsSection,
   SummarySection
-}
+};

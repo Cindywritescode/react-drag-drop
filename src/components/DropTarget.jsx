@@ -10,6 +10,7 @@ const DropTarget = styled.div`
   background-color: #c8dadf;
   outline: 2px dashed ${props => props.active ? '#103c4a' : '#92b0b3'};
   outline-offset: -${props => props.active ? 25 : 15}px;
+  padding: 25px;
   transition: outline-offset 95ms ease-in;
   filter: invert(${props => props.active ? 0.25 : 0});
 
