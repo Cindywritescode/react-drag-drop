@@ -1,11 +1,17 @@
-import './App.css';
 import { DropBox } from './components/DropBox';
+import styled from 'styled-components';
+
+const BoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <BoxContainer>
       <DropBox/>
-    </div>
+    </BoxContainer>
   );
 }
 

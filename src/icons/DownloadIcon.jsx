@@ -52,7 +52,9 @@ const flipUpDown = keyframes`
 
 const AnimatedIcon = styled(Icon)`
   animation: ${props => props.animate ? flipUpDown : 'none'} 1s ease-out infinite;
+  margin-top: 30px;
 `
+
 
 export {
   DownloadIconArrow,
