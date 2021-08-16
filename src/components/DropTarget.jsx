@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 const DropTarget = styled.div`
-  margin: 20px 160px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   justify-content: center;
   align-items: center;
   background-color: #c8dadf;
@@ -26,4 +25,4 @@ const DropTarget = styled.div`
 
 export {
   DropTarget
-}
+};
